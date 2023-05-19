@@ -1,0 +1,28 @@
+application:
+  db:
+    port: 5432
+    host: localhost
+    database: soft
+
+spring:
+  profiles:
+    active: develop
+  datasource:
+    url: 'jdbc:postgresql://${application.db.host}:${application.db.port}/${application.db.database}'
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  liquibase:
+    change-log: classpath:/db/liquibase-changelog.xml
+    contexts: dev
+
+
+
+server:
+  port: 8095
+  servlet:
+    context-path: /soft/api
