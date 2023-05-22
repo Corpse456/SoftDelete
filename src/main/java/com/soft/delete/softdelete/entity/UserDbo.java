@@ -23,7 +23,7 @@ import org.hibernate.annotations.Where;
 //@Filter(name = "deletedFilter", condition = "deleted = :isDeleted")
 @Where(clause = "deleted is false")
 @EntityListeners(PersistListener.class)
-public class UserDbo {
+public class UserDbo implements Model {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
