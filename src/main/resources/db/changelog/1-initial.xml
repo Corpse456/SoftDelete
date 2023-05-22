@@ -22,4 +22,23 @@
       <column name="updated_at" type="timestamp"/>
     </createTable>
   </changeSet>
+
+  <changeSet id="add_company_table" author="neznaev">
+    <createTable tableName="company">
+      <column name="id" type="bigint(20)" autoIncrement="true">
+        <constraints primaryKeyName="company_pk"
+          primaryKey="true"/>
+      </column>
+      <column name="name" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="last_name" type="varchar(255)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="deleted" type="boolean" defaultValue="false"/>
+      <column name="deleted_at" type="timestamp"/>
+      <column name="created_at" type="timestamp"/>
+      <column name="updated_at" type="timestamp"/>
+    </createTable>
+  </changeSet>
 </databaseChangeLog>

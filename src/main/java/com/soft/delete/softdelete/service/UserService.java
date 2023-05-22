@@ -24,8 +24,6 @@ public class UserService {
 
   public List<UserDto> getAllUsers() {
     final var all = repository.findAll();
-    final var allDeleted = repository.findAllDeleted();
-    System.out.println(allDeleted);
     return mapper.toDto(all);
   }
 

@@ -37,5 +37,38 @@
         </insert>
     </changeSet>
 
+    <changeSet id="add_default_companies" author="neznaev">
+        <insert tableName="company">
+            <column name="name" value="User1"/>
+            <column name="last_name" value="LastName1"/>
+            <column name="created_at" value="now()"/>
+        </insert>
+        <insert tableName="company">
+            <column name="name" value="User2"/>
+            <column name="last_name" value="LastName2"/>
+            <column name="created_at" value="now()"/>
+        </insert>
+        <insert tableName="company">
+            <column name="name" value="User3"/>
+            <column name="last_name" value="LastName3"/>
+            <column name="created_at" value="now()"/>
+        </insert>
+        <insert tableName="company">
+            <column name="name" value="User4"/>
+            <column name="last_name" value="LastName4"/>
+            <column name="created_at" value="now()"/>
+        </insert>
+        <insert tableName="company">
+            <column name="name" value="User5"/>
+            <column name="last_name" value="LastName5"/>
+            <column name="created_at" value="now()"/>
+        </insert>
+        <insert tableName="company">
+            <column name="name" value="User6"/>
+            <column name="last_name" value="LastName6"/>
+            <column name="created_at" value="now()"/>
+        </insert>
+    </changeSet>
+
     <include file="test/insert-test-data.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

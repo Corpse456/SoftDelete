@@ -1,8 +1,22 @@
 package com.soft.delete.softdelete.entity;
 
+import java.time.LocalDateTime;
+
 public interface Model {
 
-  void setCreatedAt(java.time.LocalDateTime createdAt);
+  Long getId();
 
-  void setUpdatedAt(java.time.LocalDateTime updatedAt);
+  String getName();
+
+  String getLastName();
+
+  boolean isDeleted();
+
+  LocalDateTime getDeletedAt();
+
+  void setCreatedAt(LocalDateTime createdAt);
+
+  void setUpdatedAt(LocalDateTime updatedAt);
+
+
 }
